@@ -1,11 +1,13 @@
 .cards {
-    border: solid black 1px;
     width: 187px;
     height: 99px;
     font-family: 'Oswald', sans-serif;
     font-size: 50px;
     display: inline-block;
     text-align: center;
+    /*---gradient courtesy of CoolHue---*/
+    background-image: linear-gradient( 135deg, #6B73FF 10%, #000DFF 100%);
+    color: white;
     
 }
 
