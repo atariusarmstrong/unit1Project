@@ -4,6 +4,8 @@
     height: 99px;
     font-family: 'Oswald', sans-serif;
     font-size: 50px;
+    display: inline-block;
+    text-align: center;
     
 }
 
@@ -11,7 +13,10 @@
     border: solid black 1px;
     width: 186px;
     height: 48px;
-    font-family: 'Noto Serif', serif;
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    display: inline-block;
+    text-align: center;
 }
 
 .logo{
@@ -28,7 +33,7 @@
     grid-column-gap: 51px;
     grid-row-gap: 18px;
     grid-auto-flow: row;
-    justify-content: center
+    justify-content: center;
 }
 /*------- CARDS -----*/
 .one {
@@ -74,5 +79,6 @@
     grid-row-start: 7;
     font-family: 'Pacifico', cursive;
     font-size: 28px;
-
+    display: inline-block;
+    text-align: center;
 }

@@ -1,4 +1,4 @@
-//Set cloned items into variables
+//Set cards to be clone into variables
 var oneCards = $('.one:last')
 var twoCards = $('.two:last')
 var threeCards = $('.three:last')
