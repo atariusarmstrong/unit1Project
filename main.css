@@ -12,6 +12,13 @@
     height: 48px;
 }
 
+.logo{
+    height: 50%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 .gamingArea{
     display: grid;
     grid-template-columns: 188px 188px 188px 188px 188px;
@@ -19,6 +26,7 @@
     grid-column-gap: 51px;
     grid-row-gap: 18px;
     grid-auto-flow: row;
+    justify-content: center
 }
 /*------- CARDS -----*/
 .one {
@@ -35,6 +43,11 @@
 }
 .five {
     grid-row-start: 6;
+}
+
+#finalquestion {
+    border: solid black 1px;
+    grid-column-end: span 5;
 }
 
 
