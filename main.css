@@ -3,3 +3,9 @@
     width: 187px;
     height: 99px;
 }
+
+.category{
+    border: solid black 1px;
+    width: 186px;
+    height: 48px;
+}
