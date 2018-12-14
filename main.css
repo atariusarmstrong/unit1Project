@@ -2,8 +2,8 @@
     border: solid black 1px;
     width: 187px;
     height: 99px;
-    grid-row-start: 2;
-    grid-row-end: 6;
+    
+    
 }
 
 .category{
@@ -16,8 +16,30 @@
     display: grid;
     grid-template-columns: 188px 188px 188px 188px 188px;
     grid-template-rows: 48px 99px 99px 99px 99px 99px 48px;
+    grid-column-gap: 51px;
+    grid-row-gap: 18px;
+    grid-auto-flow: row;
+}
+/*------- CARDS -----*/
+.one {
+    grid-row-start: 2;
+}
+.two {
+    grid-row-start: 3;
+}
+.three {
+    grid-row-start: 4;
+}
+.four {
+    grid-row-start: 5;
+}
+.five {
+    grid-row-start: 6;
 }
 
+
+
+/* ---- CATEGORIES ---*/
 #cat1{
     grid-column-start: 1;
 }
