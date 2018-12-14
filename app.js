@@ -4,4 +4,3 @@ for (let i = 0; i < 29; i ++) {
 
     $('.cards:last').clone().appendTo('body')
 }
-

@@ -2,10 +2,36 @@
     border: solid black 1px;
     width: 187px;
     height: 99px;
+    grid-row-start: 2;
 }
 
 .category{
     border: solid black 1px;
     width: 186px;
     height: 48px;
+}
+
+.gamingArea{
+    display: grid;
+    grid-template-columns: 188px 188px 188px 188px 188px;
+    grid-template-rows: 48px 99px 99px 99px 99px 99px 48px;
+}
+
+#cat1{
+    grid-column-start: 1;
+}
+#cat2{
+    grid-column-start: 2;
+}
+#cat3{
+    grid-column-start: 3;
+}
+#cat4{
+    grid-column-start: 4;
+}
+#cat5{
+    grid-column-start: 5;
+}
+#finalquestion{
+    grid-row-start: 7;
 }
