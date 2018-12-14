@@ -17,5 +17,8 @@ for (let i = 0; i < 4; i ++) {
     fiveCards.clone().appendTo('.gamingArea')
 }
 
-
+//Card click tester
+$('.cards').click(function(){
+    console.log('This tester works so far.')
+})
 

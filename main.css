@@ -1,3 +1,8 @@
+body {
+background: rgb(37,37,37);
+background: linear-gradient(0deg, rgba(37,37,37,1) 20%, rgba(116,116,116,1) 85%);
+}
+
 .cards {
     width: 187px;
     height: 99px;
