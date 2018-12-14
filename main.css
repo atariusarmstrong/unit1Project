@@ -3,6 +3,7 @@
     width: 187px;
     height: 99px;
     grid-row-start: 2;
+    grid-row-end: 6;
 }
 
 .category{
