@@ -17,7 +17,7 @@ for (let i = 0; i < 4; i ++) {
     fiveCards.clone().appendTo('.gamingArea')
 }
 
-//Card click tester
+//Card click tester now with modal
 $('.cards').click(function(){
     console.log('This tester works so far.')
     clickCard()
@@ -25,10 +25,19 @@ $('.cards').click(function(){
 
 //When user clicks on card it should open a prompt for a question
 let clickCard = function (){
-    alert("This is an alert in place of the window that should open")
+    document.getElementById("question1").showModal()
 }
 
 //User will select answer then hit "submit"
 //When user submits answer it should either prompt that it's correct or incorrect
 //When prompt closes, that card is no longer clickable
+
+
+//QUESTIONS
+
+
+
+//SETTING UP DIALOG WINDOW TESTER FOR QUESTION BOXES
+//Set up dialog in HTML
+//Run function in the script to bring up new window
 
