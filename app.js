@@ -21,17 +21,19 @@ for (let i = 0; i < 4; i ++) {
 $('.cards').click(function(){
     console.log('This tester works so far.') 
     clickCard()
+    $('#question').html(this.question)
 })
 
 //When user clicks on card it should open a prompt for a question
 let clickCard = function (){
-    document.getElementById("question1").showModal()
+    document.getElementById('question').showModal()
 }
-let clickCardTwo = function() {
-    document.getElementById('question2').showModal()
-}
+//let clickCardTwo = function() {
+//    document.getElementById('question2').showModal()
+//}
 
 //User will select answer then hit "submit"
+
 //When user submits answer it should either prompt that it's correct or incorrect
 //When prompt closes, that card is no longer clickable
 
@@ -67,6 +69,21 @@ var categoryOne = [{
     options: ['Charleston', 'Gallop', 'Stampede', 'March'],
     answer: 3
 }]
+
+//class for question and answer
+class questionModal {
+    constructor(question, options, answer) {
+        this.question = question
+        this.options = options
+        this.answer = answer
+    }
+}
+
+let musicQuestions = []
+for (let i=0; i<4; i++){
+    let musicObject = new questionModal(categoryOne[i].question, categoryOne[i].options, categoryOne[i].answer, (i*100+(100)))
+    musicQuestions.push(musicObject)
+}
 
 
 //SETTING UP DIALOG WINDOW TESTER FOR QUESTION BOXES
