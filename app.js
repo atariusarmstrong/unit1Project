@@ -10,11 +10,11 @@ var fiveCards = $('.five:last')
 for (let i = 0; i < 4; i ++) {
     console.log("cards")
 
-    oneCards.clone().appendTo('.gamingArea')
-    twoCards.clone().appendTo('.gamingArea')
-    threeCards.clone().appendTo('.gamingArea')
-    fourCards.clone().appendTo('.gamingArea')
-    fiveCards.clone().appendTo('.gamingArea')
+    oneCards.clone().appendTo('#cat'+ (i + 2))
+    twoCards.clone().appendTo('#cat'+ (i + 2))
+    threeCards.clone().appendTo('#cat'+ (i + 2))
+    fourCards.clone().appendTo('#cat'+ (i + 2))
+    fiveCards.clone().appendTo('#cat'+ (i + 2))
 }
 
 //Card click tester now with modal
@@ -83,7 +83,9 @@ let musicQuestions = []
 for (let i=0; i<4; i++){
     let musicObject = new questionModal(categoryOne[i].question, categoryOne[i].options, categoryOne[i].answer, (i*100+(100)))
     musicQuestions.push(musicObject)
+    $('')
 }
+
 
 
 //SETTING UP DIALOG WINDOW TESTER FOR QUESTION BOXES
