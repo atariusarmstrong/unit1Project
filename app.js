@@ -18,16 +18,16 @@ for (let i = 0; i < 4; i ++) {
 }
 
 //Card click tester now with modal
-$('.cards').click(function(){
-    console.log('This tester works so far.') 
-    clickCard()
-    $('#question').html(this.question)
-})
+// $('.cards').click(function(){
+//     console.log('This tester works so far.') 
+//     clickCard()
+
+// })
 
 //When user clicks on card it should open a prompt for a question
-let clickCard = function (){
-    document.getElementById('question').showModal()
-}
+// let clickCard = function (){
+//     document.getElementById('question').showModal()
+// }
 //let clickCardTwo = function() {
 //    document.getElementById('question2').showModal()
 //}
@@ -77,14 +77,31 @@ class questionModal {
         this.options = options
         this.answer = answer
     }
+    click(){
+    console.log("clicked" + this.question)
+    $('.questionarea').html(this.question)
+    document.getElementById('question').showModal()
+    }
 }
 
+let cardArray = [".one", ".two", ".three", ".four", ".five"]
+
 let musicQuestions = []
-for (let i=0; i<4; i++){
+for (let i=0; i<5; i++){
     let musicObject = new questionModal(categoryOne[i].question, categoryOne[i].options, categoryOne[i].answer, (i*100+(100)))
     musicQuestions.push(musicObject)
-    $('')
+    console.log($('#cat1 .cards' + cardArray[i]).html())
+    $('#cat1 .cards' + cardArray[i]).on('click', ()=> musicQuestions[i].click())
 }
+
+
+//$('#cat1').children().on('click', ()=> musicObject.click())
+
+// $('.cards').click(function(){
+//     console.log('This tester works so far.') 
+//     clickCard()
+
+// })
 
 
 
