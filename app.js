@@ -8,8 +8,6 @@ var fiveCards = $('.five:last')
 
 //Make 30 Divs for playing cards
 for (let i = 0; i < 4; i ++) {
-    console.log("cards")
-
     oneCards.clone().appendTo('#cat'+ (i + 2))
     twoCards.clone().appendTo('#cat'+ (i + 2))
     threeCards.clone().appendTo('#cat'+ (i + 2))
@@ -26,9 +24,10 @@ class questionModal {
     }
     //When div is clicked the question and the answer options appear in the modal
     click(){
-    console.log("clicked" + this.question)
     $('.questionarea').html(this.question)
-    $('.answerarea').html(this.options)
+    for (let i=0; i< this.options.length; i++){
+        $('#answer' + i).html(this.options[i])
+    }
     document.getElementById('question').showModal()
     }
 }
@@ -111,8 +110,9 @@ for (let i=0; i<5; i++){
     let musicObject = new questionModal(categoryOne[i].question, categoryOne[i].options, categoryOne[i].answer, (i*100+(100)))
     musicQuestions.push(musicObject)
     
-    console.log($('#cat1 .cards' + cardArray[i]).html())
+    //console.log($('#cat1 .cards' + cardArray[i]).html())
     $('#cat1 .cards' + cardArray[i]).on('click', ()=> musicQuestions[i].click())
+    
     
     
 }
