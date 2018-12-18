@@ -30,6 +30,9 @@ class questionModal {
     }
     document.getElementById('question').showModal()
     }
+    answerSubmit() {
+        
+    }
 }
 
 
@@ -59,11 +62,6 @@ var categoryOne = [{
     question: "In a 1991 top 5 hit Bonnie Raitt sang Let's give them this later the title of a Julia Roberts-Dennis Quaid movie",
     options: ['Something To Talk About', 'A Little More Love', 'Holly Jolly Christmas', 'More'],
     answer: 0
-},
-{
-    question: 'While the military type of this composition is usually fast and upbeat the funeral type is slow and somber',
-    options: ['Charleston', 'Gallop', 'Stampede', 'March'],
-    answer: 3
 }]
 
 
@@ -78,28 +76,21 @@ var categoryTwo = [{
     options: ['Andy Warhol', 'Will Rogers', 'William Shakespeare', "Bill Bellamy"],
     answer: 1
 },
-//NEEDS TO BE UPDATED
-// {
-//     question: 'This elegant dance for couples dominated aristocratic European ballrooms from about 1650 to 1750',
-//     options: ['The Waltz', 'The Minuet', 'The Mirengue', 'The Fox Trot'],
-//     answer: 1
-// },
-// {
-//     question: 'In a Marvin Gaye song this title precedes things aint what they used to be',
-//     options: ['I Want You', 'Lets Get It On', 'Mercy Mercy Me', "You're All I Need to Get By"],
-//     answer: 2
-// },
-// {
-//     question: "In a 1991 top 5 hit Bonnie Raitt sang Let's give them this later the title of a Julia Roberts-Dennis Quaid movie",
-//     options: ['Something To Talk About', 'A Little More Love', 'Holly Jolly Christmas', 'More'],
-//     answer: 0
-// },
-// {
-//     question: 'While the military type of this composition is usually fast and upbeat the funeral type is slow and somber',
-//     options: ['Charleston', 'Gallop', 'Stampede', 'March'],
-//     answer: 3
-// }
-]
+{
+    question: 'She followed Florence Harding into the White House',
+    options: ['Chloe Grace Moretz', 'Grace Jones', 'Grace Coolidge', 'Grace Phipps'],
+    answer: 2
+},
+{
+    question: 'In 2016 this rear admiral and first Lady of Software was posthumously awarded the Presidential Medal of Freedom',
+    options: ['Grace Hopper', 'Grace Foley', 'Grace Shadrack', "Grace Jones"],
+    answer: 2
+},
+{
+    question: "Not a movie star but a movie czar his censorship code governed the movie industry until the 1960s",
+    options: ['Will Smith', 'William Baldwin', 'Willie Aames', 'Will Hays'],
+    answer: 3
+}]
 
 
 
