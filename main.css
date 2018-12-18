@@ -76,8 +76,15 @@ h3 {
     background-color: white;
 }
 
-
-
+.done {
+    background: linear-gradient(0deg, rgba(37,37,37,1) 20%, rgba(116,116,116,1) 85%);
+    pointer-events: none;
+}
+.escape{
+    color: grey;
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+}
 /* ---- CATEGORIES ---*/
 #cat1{
     grid-column-start: 1;
@@ -112,10 +119,14 @@ h3 {
 
 #correct {
     font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    text-align: center;
     color: green;
 }
 
 #incorrect {
     font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    text-align: center;
     color: red;
 }

@@ -1,19 +1,19 @@
-//Set cards to be clone into variables
-var oneCards = $('.one:last')
-var twoCards = $('.two:last')
-var threeCards = $('.three:last')
-var fourCards = $('.four:last')
-var fiveCards = $('.five:last')
+// //Set cards to be clone into variables
+// var oneCards = $('.one:last')
+// var twoCards = $('.two:last')
+// var threeCards = $('.three:last')
+// var fourCards = $('.four:last')
+// var fiveCards = $('.five:last')
 
 
-//Make 30 Divs for playing cards
-for (let i = 0; i < 4; i ++) {
-    oneCards.clone().appendTo('#cat'+ (i + 2))
-    twoCards.clone().appendTo('#cat'+ (i + 2))
-    threeCards.clone().appendTo('#cat'+ (i + 2))
-    fourCards.clone().appendTo('#cat'+ (i + 2))
-    fiveCards.clone().appendTo('#cat'+ (i + 2))
-}
+// //Make 30 Divs for playing cards
+// for (let i = 0; i < 4; i ++) {
+//     oneCards.clone().appendTo('#cat'+ (i + 2))
+//     twoCards.clone().appendTo('#cat'+ (i + 2))
+//     threeCards.clone().appendTo('#cat'+ (i + 2))
+//     fourCards.clone().appendTo('#cat'+ (i + 2))
+//     fiveCards.clone().appendTo('#cat'+ (i + 2))
+// }
 
 //class for question and answer
 let currentAnswer = 0
@@ -23,7 +23,19 @@ class questionModal {
         this.options = options
         this.answer = answer
         this.value = value
+        this.cardContainer = this.createNewCard();
     }
+
+    createNewCard() {
+        let newCard = document.createElement('div')
+        newCard.innerText= this.value
+        newCard.setAttribute('class', 'cards')
+        newCard.addEventListener('click', () => this.click());
+
+        return newCard;
+
+    }
+
     //When div is clicked the question and the answer options appear in the modal
     click(){
         $('.questionarea').html(this.question)
@@ -34,13 +46,19 @@ class questionModal {
         currentAnswer = this.answer
 
     document.getElementById('question').showModal()
+    //$('.cards').addClass('done')
+    this.cardContainer.setAttribute('class', 'cards done')
+    console.log($('.cards'))
+    
     }
     answerSubmit() {
             let index = $(this).attr('data-value')
-
+            
+            //When the answer is correct open this dialog
             if(index == currentAnswer) {
                 document.getElementById('correct').showModal()
                 console.log(this.value)
+            //When the answer is incorrect open this dialog
             } else {
                 document.getElementById('incorrect').showModal()
             }
@@ -221,36 +239,47 @@ let mtQuestions = []
 let travelQuestions = []
 let kidsQuestions = []
 
-
+let musicContainer = document.getElementById("cat1")
+let wagContainer = document.getElementById("cat2")
+let mtContainer = document.getElementById('cat3')
+let travelContainer = document.getElementById('cat4')
+let kidsContainer = document.getElementById('cat5')
 
 for (let i=0; i<5; i++){
     //--MUSIC QUESTIONS FOR CATEGORY 1
     let musicObject = new questionModal(categoryOne[i].question, categoryOne[i].options, categoryOne[i].answer, (i*100+(100)))
     musicQuestions.push(musicObject)
+    musicContainer.appendChild(musicObject.cardContainer);
 
     //--WILL&GRACE QUESTIONS FOR CATEGORY 2
     let wagObject = new questionModal(categoryTwo[i].question, categoryTwo[i].options, categoryTwo[i].answer, (i*100+(100)))
     wagQuestions.push(wagObject)
+    wagContainer.appendChild(wagObject.cardContainer)
 
     //--MUSICAL THEATRE QUESTIONS FOR CATEGORY 3
     let mtObject = new questionModal(categoryThree[i].question, categoryThree[i].options, categoryThree[i].answer, (i*100+(100)))
     mtQuestions.push(mtObject)
+    mtContainer.appendChild(mtObject.cardContainer)
     
     //--TRAVEL QUESTIONS FOR CATEGORY 4
     let travelObject = new questionModal(categoryFour[i].question, categoryFour[i].options, categoryFour[i].answer, (i*100+(100)))
     travelQuestions.push(travelObject)
+    travelContainer.appendChild(travelObject.cardContainer)
 
     //--KIDS BOOKS QUESTIONS FOR CATEGORY 5
     let kidsObject = new questionModal(categoryFive[i].question, categoryFive[i].options, categoryFive[i].answer, (i*100+(100)))
     kidsQuestions.push(kidsObject)
+    kidsContainer.appendChild(kidsObject.cardContainer)
 
 
     
+    /*
     $('#cat1 .cards' + cardArray[i]).on('click', ()=> musicQuestions[i].click())
     $('#cat2 .cards' + cardArray[i]).on('click', ()=> wagQuestions[i].click())
     $('#cat3 .cards' + cardArray[i]).on('click', ()=> mtQuestions[i].click())
     $('#cat4 .cards' + cardArray[i]).on('click', ()=> travelQuestions[i].click())
     $('#cat5 .cards' + cardArray[i]).on('click', ()=> kidsQuestions[i].click())
+    */
 
 }
 
