@@ -41,7 +41,9 @@ class questionModal {
 
             if(index == currentAnswer) {
                 document.getElementById('correct').showModal()
-            } 
+            } else {
+                document.getElementById('incorrect').showModal()
+            }
         }
 }
 
@@ -184,12 +186,6 @@ var categoryFive = [{
     answer: 1
 }]
 
-//FINAL QUESTION
-// var categoryFinal = [{
-//     question: "In You Learn By Living this first lady of the 1940s challenged you must do the thing you think you cannot do",
-//     options: ['Jackie Kennedy', 'Eleanor Roosevelt', 'Nancy Reagan', 'Elizabeth Wallace'],
-//     answer: 1
-// }]
 
 let cardArray = [".one", ".two", ".three", ".four", ".five"]
 
@@ -199,7 +195,7 @@ let wagQuestions = []
 let mtQuestions = []
 let travelQuestions = []
 let kidsQuestions = []
-// let finalQuestion = []
+
 
 
 for (let i=0; i<5; i++){
@@ -223,16 +219,14 @@ for (let i=0; i<5; i++){
     let kidsObject = new questionModal(categoryFive[i].question, categoryFive[i].options, categoryFive[i].answer, (i*100+(100)))
     kidsQuestions.push(kidsObject)
 
-    //FINAL QUESTION
-    // let finalObject = new questionModal(categoryFinal.question, categoryFinal.options, categoryFinal.answer)
-    // finalQuestion.push(finalObject)
+
     
     $('#cat1 .cards' + cardArray[i]).on('click', ()=> musicQuestions[i].click())
     $('#cat2 .cards' + cardArray[i]).on('click', ()=> wagQuestions[i].click())
     $('#cat3 .cards' + cardArray[i]).on('click', ()=> mtQuestions[i].click())
     $('#cat4 .cards' + cardArray[i]).on('click', ()=> travelQuestions[i].click())
     $('#cat5 .cards' + cardArray[i]).on('click', ()=> kidsQuestions[i].click())
-//    $('#finalquestion').on('click', ()=> click())
+
 }
 
 //Change background color of answer when hovered
