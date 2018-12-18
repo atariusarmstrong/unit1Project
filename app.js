@@ -30,17 +30,15 @@ class questionModal {
 
     document.getElementById('question').showModal()
     //$('.cards').addClass('done')
-    this.cardContainer.setAttribute('class', 'cards done')
-    console.log($('.cards'))
-    
+    this.cardContainer.setAttribute('class', 'cards done')    
     }
+    
     answerSubmit() {
             let index = $(this).attr('data-value')
             
             //When the answer is correct open this dialog
             if(index == currentAnswer) {
                 document.getElementById('correct').showModal()
-                console.log(this.value)
             //When the answer is incorrect open this dialog
             } else {
                 document.getElementById('incorrect').showModal()
