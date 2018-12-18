@@ -6,7 +6,7 @@ This game is an online replica of the hit TV-game-show "Jeopardy".
 
 The objective of the game is to test the user's knowledge with "reverse trivia". When the user clicks on a box, a prompt is shown with a description to a specific person, place, or thing. The user must answer with the correct selection for points to be added to their total. For incorrect answers the user isn't rewarded. The game is complete when all boxes are cleared.
 
-Live Site:
+Live Site: https://atariusarmstrong.github.io/unit1Project/
 
 ## Technologies Used
 - Language: HTML5, CSS3, Javascript, jQuery
