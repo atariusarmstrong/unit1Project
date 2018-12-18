@@ -119,12 +119,42 @@ var categoryThree = [{
     answer: 2
 }]
 
+//CATEGORY FOUR QUESTIONS -- TRAVEL
+var categoryFour = [{
+    question: "This clothing store chain once has Travel & Safari Clothing Co. as part of its name",
+    options: ["Banana Republic", "LuLu Lemon", "Nike", "Express", "Anthropologie"],
+    answer: 0
+},
+{
+    question: 'This character began traveling around in a large fruit in 1961',
+    options: ['Kuzco', 'Aladdin', 'James', 'Mark'],
+    answer: 2
+},
+{
+    question: 'This Haitian capital was founded by French planters in 1749',
+    options: ['Bogota', 'Lima', 'Guadalajara', 'Port-Au-Prince'],
+    answer: 3
+},
+{
+    question: 'The Swann valley outside this Western Australian city is home to dozens of vineyards',
+    options: ['Perth', 'Instanbull', 'New Zealand', 'Sydney'],
+    answer: 0
+},
+{
+    question: "A group of travelers use Saknussemm's Corridor to do this the title of a Verne novel",
+    options: ['A Wrinkle in Time', 'Journey to the Center of the Earth', 'Bridge to Terabithia', 'The Hobbit'],
+    answer: 1
+}]
+
+
+
 let cardArray = [".one", ".two", ".three", ".four", ".five"]
 
 //FUNCTION & ARRAYS TO DISPLAY ABOVE CATEGORIES
 let musicQuestions = []
 let wagQuestions = []
 let mtQuestions = []
+let travelQuestions = []
 
 
 for (let i=0; i<5; i++){
@@ -140,10 +170,14 @@ for (let i=0; i<5; i++){
     let mtObject = new questionModal(categoryThree[i].question, categoryThree[i].options, categoryThree[i].answer, (i*100+(100)))
     mtQuestions.push(mtObject)
     
+    //--TRAVEL QUESTIONS FOR CATEGORY 4
+    let travelObject = new questionModal(categoryFour[i].question, categoryFour[i].options, categoryFour[i].answer, (i*100+(100)))
+    travelQuestions.push(travelObject)
     
     $('#cat1 .cards' + cardArray[i]).on('click', ()=> musicQuestions[i].click())
     $('#cat2 .cards' + cardArray[i]).on('click', ()=> wagQuestions[i].click())
     $('#cat3 .cards' + cardArray[i]).on('click', ()=> mtQuestions[i].click())
+    $('#cat4 .cards' + cardArray[i]).on('click', ()=> travelQuestions[i].click())
 }
 
 
