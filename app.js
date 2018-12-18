@@ -1,20 +1,3 @@
-// //Set cards to be clone into variables
-// var oneCards = $('.one:last')
-// var twoCards = $('.two:last')
-// var threeCards = $('.three:last')
-// var fourCards = $('.four:last')
-// var fiveCards = $('.five:last')
-
-
-// //Make 30 Divs for playing cards
-// for (let i = 0; i < 4; i ++) {
-//     oneCards.clone().appendTo('#cat'+ (i + 2))
-//     twoCards.clone().appendTo('#cat'+ (i + 2))
-//     threeCards.clone().appendTo('#cat'+ (i + 2))
-//     fourCards.clone().appendTo('#cat'+ (i + 2))
-//     fiveCards.clone().appendTo('#cat'+ (i + 2))
-// }
-
 //class for question and answer
 let currentAnswer = 0
 class questionModal {
@@ -270,17 +253,6 @@ for (let i=0; i<5; i++){
     let kidsObject = new questionModal(categoryFive[i].question, categoryFive[i].options, categoryFive[i].answer, (i*100+(100)))
     kidsQuestions.push(kidsObject)
     kidsContainer.appendChild(kidsObject.cardContainer)
-
-
-    
-    /*
-    $('#cat1 .cards' + cardArray[i]).on('click', ()=> musicQuestions[i].click())
-    $('#cat2 .cards' + cardArray[i]).on('click', ()=> wagQuestions[i].click())
-    $('#cat3 .cards' + cardArray[i]).on('click', ()=> mtQuestions[i].click())
-    $('#cat4 .cards' + cardArray[i]).on('click', ()=> travelQuestions[i].click())
-    $('#cat5 .cards' + cardArray[i]).on('click', ()=> kidsQuestions[i].click())
-    */
-
 }
 
 //Change background color of answer when hovered

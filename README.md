@@ -16,7 +16,8 @@ Live Site:
 
 
 
-Future Development:
+##Future Development:
 -Add animation when the score is correct
 -Add score to the score box
 -Make the game resizeable for various screen sizes
+-Add timer to questions
