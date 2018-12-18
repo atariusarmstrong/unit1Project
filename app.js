@@ -16,6 +16,7 @@ for (let i = 0; i < 4; i ++) {
 }
 
 //class for question and answer
+let currentAnswer = 0
 class questionModal {
     constructor(question, options, answer) {
         this.question = question
@@ -24,25 +25,26 @@ class questionModal {
     }
     //When div is clicked the question and the answer options appear in the modal
     click(){
-    $('.questionarea').html(this.question)
-    for (let i=0; i< this.options.length; i++){
+        $('.questionarea').html(this.question)
+        for (let i=0; i< this.options.length; i++){
         $('#answer' + i).html(this.options[i])
-    }
+        $('#answer' + i).on('click', this.answerSubmit)
+         }
+        currentAnswer = this.answer
+
     document.getElementById('question').showModal()
     }
     answerSubmit() {
-        
-        $('.answerarea').on('click', function(){
-            let index = $('.answerarea').index(this)
-            //console.log("answer submitted")
-            if(index == 0) {
+            let index = $(this).attr('data-value')
+            console.log(currentAnswer)
+            console.log(index)
+
+            if(index == currentAnswer) {
                 document.getElementById('correct').showModal()
-            } else {
-                document.getElementById('incorrect').showModal()
-            }
-        })
-    }
+            } 
+        }
 }
+
 
 
 //QUESTIONS COURTESY OF JEOPARDYQUESTIONS.COM
@@ -225,7 +227,7 @@ for (let i=0; i<5; i++){
     // let finalObject = new questionModal(categoryFinal.question, categoryFinal.options, categoryFinal.answer)
     // finalQuestion.push(finalObject)
     
-    $('#cat1 .cards' + cardArray[i]).on('click', ()=> musicQuestions[i].click(), musicQuestions[i].answerSubmit())
+    $('#cat1 .cards' + cardArray[i]).on('click', ()=> musicQuestions[i].click())
     $('#cat2 .cards' + cardArray[i]).on('click', ()=> wagQuestions[i].click())
     $('#cat3 .cards' + cardArray[i]).on('click', ()=> mtQuestions[i].click())
     $('#cat4 .cards' + cardArray[i]).on('click', ()=> travelQuestions[i].click())
