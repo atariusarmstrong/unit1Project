@@ -96,17 +96,27 @@ var categoryTwo = [{
 
 let cardArray = [".one", ".two", ".three", ".four", ".five"]
 
+//FUNCTIONS TO DISPLAY ABOVE CATEGORIES
 let musicQuestions = []
+let wagQuestions = []
+
+
 for (let i=0; i<5; i++){
+    //--MUSIC QUESTIONS FOR CATEGORY 1
     let musicObject = new questionModal(categoryOne[i].question, categoryOne[i].options, categoryOne[i].answer, (i*100+(100)))
     musicQuestions.push(musicObject)
+
+    //--WILL&GRACE QUESTIONS FOR CATEGORY2
+    let wagObject = new questionModal(categoryTwo[i].question, categoryTwo[i].options, categoryTwo[i].answer, (i*100+(100)))
+    wagQuestions.push(wagObject)
     
     //console.log($('#cat1 .cards' + cardArray[i]).html())
     $('#cat1 .cards' + cardArray[i]).on('click', ()=> musicQuestions[i].click())
-    
-    
-    
+    $('#cat2 .cards' + cardArray[i]).on('click', ()=> wagQuestions[i].click())
 }
+
+
+
 
 
 
