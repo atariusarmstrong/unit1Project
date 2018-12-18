@@ -224,6 +224,14 @@ for (let i=0; i<5; i++){
 //    $('#finalquestion').on('click', ()=> click())
 }
 
+//Change background color of answer when hovered
+$('.answerarea').hover(function(){
+    $(this).css("background-color", "goldenrod")
+    }, function() {
+        $(this).css("background-color", "white")
+    }
+)
+
  
 
 
