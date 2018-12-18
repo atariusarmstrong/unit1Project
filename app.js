@@ -22,7 +22,7 @@ class questionModal {
         this.question = question
         this.options = options
         this.answer = answer
-        this.value =value
+        this.value = value
     }
     //When div is clicked the question and the answer options appear in the modal
     click(){
@@ -37,11 +37,10 @@ class questionModal {
     }
     answerSubmit() {
             let index = $(this).attr('data-value')
-            console.log(currentAnswer)
-            console.log(index)
 
             if(index == currentAnswer) {
                 document.getElementById('correct').showModal()
+                console.log(this.value)
             } else {
                 document.getElementById('incorrect').showModal()
             }

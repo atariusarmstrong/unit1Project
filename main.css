@@ -51,6 +51,8 @@ h3 {
     justify-content: center;
 }
 
+
+
 /*------- CARDS -----*/
 .one {
     grid-row-start: 2;
@@ -97,6 +99,14 @@ h3 {
     font-family: 'Pacifico', cursive;
     font-size: 28px;
     display: inline-block;
+    text-align: center;
+}
+
+#question {
+    font-family: 'Oswald', sans-serif;
+}
+
+.answerarea{
     text-align: center;
 }
 
