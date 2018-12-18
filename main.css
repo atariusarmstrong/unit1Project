@@ -43,6 +43,7 @@ background: linear-gradient(0deg, rgba(37,37,37,1) 20%, rgba(116,116,116,1) 85%)
     grid-auto-flow: row;
     justify-content: center;
 }
+
 /*------- CARDS -----*/
 .one {
     grid-row-start: 2;
@@ -89,4 +90,14 @@ background: linear-gradient(0deg, rgba(37,37,37,1) 20%, rgba(116,116,116,1) 85%)
     font-size: 28px;
     display: inline-block;
     text-align: center;
+}
+
+#correct {
+    font-family: 'Pacifico', cursive;
+    color: green;
+}
+
+#incorrect {
+    font-family: 'Pacifico', cursive;
+    color: red;
 }

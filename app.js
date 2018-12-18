@@ -32,6 +32,15 @@ class questionModal {
     }
     answerSubmit() {
         
+        $('.answerarea').on('click', function(){
+            let index = $('.answerarea').index(this)
+            //console.log("answer submitted")
+            if(index == 0) {
+                document.getElementById('correct').showModal()
+            } else {
+                document.getElementById('incorrect').showModal()
+            }
+        })
     }
 }
 
@@ -216,7 +225,7 @@ for (let i=0; i<5; i++){
     // let finalObject = new questionModal(categoryFinal.question, categoryFinal.options, categoryFinal.answer)
     // finalQuestion.push(finalObject)
     
-    $('#cat1 .cards' + cardArray[i]).on('click', ()=> musicQuestions[i].click())
+    $('#cat1 .cards' + cardArray[i]).on('click', ()=> musicQuestions[i].click(), musicQuestions[i].answerSubmit())
     $('#cat2 .cards' + cardArray[i]).on('click', ()=> wagQuestions[i].click())
     $('#cat3 .cards' + cardArray[i]).on('click', ()=> mtQuestions[i].click())
     $('#cat4 .cards' + cardArray[i]).on('click', ()=> travelQuestions[i].click())
@@ -231,6 +240,9 @@ $('.answerarea').hover(function(){
         $(this).css("background-color", "white")
     }
 )
+
+
+
 
  
 
