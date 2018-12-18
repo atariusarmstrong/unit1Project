@@ -146,7 +146,39 @@ var categoryFour = [{
     answer: 1
 }]
 
+//CATEGORY FIVE QUESTIONS -- KIDS BOOKS
+var categoryFive = [{
+    question: "He's the royal elephant created by illustrator Jean de Brunhoff",
+    options: ['Dumbo', 'Babar', 'Puba', 'Elle E. Phant'],
+    answer: 1
+},
+{
+    question: 'Kids really dig this 1998 book featuring Stanley Yelnats and Zero, twof of the young inmates at Camp Green Lake',
+    options: ['Holes', 'Harry Potter and the Sorcerers Stone', 'The Perks of Being a Wallflower', 'A Series of Unfortunate Events'],
+    answer: 0
+},
+{
+    question: 'In a Dr. Seuss story he said with fingers nervously drumming I must find some way to stop Christmas from coming!',
+    options: ['The Cat in the Cat', "Oh, the Places You'll Go", 'The Grinch', 'One Fish, Two Fish, Red Fish, Blue Fish'],
+    answer: 2
+},
+{
+    question: 'Fast friends Jess and Leslie create a secret and magical kingdom across the creek in this Katherine Paterson book',
+    options: ['Bridge to Terabithia', 'The Chronicles of Narnia', 'Harry Potter and the Chamber of Secrets', 'The Fellowship of the Ring'],
+    answer: 0
+},
+{
+    question: "Lois Lowry won a 1990 Newbery Medal for this book about helping Jews to escape Denmark and the Nazis during World War II",
+    options: ['The Giver', 'Number the Stars', 'Anastasia Krupnik', 'Messenger'],
+    answer: 1
+}]
 
+//FINAL QUESTION
+var categoryFinal = [{
+    question: "In You Learn By Living this first lady of the 1940s challenged you must do the thing you think you cannot do",
+    options: ['Jackie Kennedy', 'Eleanor Roosevelt', 'Nancy Reagan', 'Elizabeth Wallace'],
+    answer: 1
+}]
 
 let cardArray = [".one", ".two", ".three", ".four", ".five"]
 
@@ -155,6 +187,8 @@ let musicQuestions = []
 let wagQuestions = []
 let mtQuestions = []
 let travelQuestions = []
+let kidsQuestions = []
+let finalQuestion = []
 
 
 for (let i=0; i<5; i++){
@@ -173,11 +207,21 @@ for (let i=0; i<5; i++){
     //--TRAVEL QUESTIONS FOR CATEGORY 4
     let travelObject = new questionModal(categoryFour[i].question, categoryFour[i].options, categoryFour[i].answer, (i*100+(100)))
     travelQuestions.push(travelObject)
+
+    //--KIDS BOOKS QUESTIONS FOR CATEGORY 5
+    let kidsObject = new questionModal(categoryFive[i].question, categoryFive[i].options, categoryFive[i].answer, (i*100+(100)))
+    kidsQuestions.push(kidsObject)
+
+    //FINAL QUESTION
+    let finalObject = new questionModal(categoryFinal.question, categoryFinal.options, categoryFinal.answer, (i*100+(100)))
+    finalQuestion.push(finalObject)
     
     $('#cat1 .cards' + cardArray[i]).on('click', ()=> musicQuestions[i].click())
     $('#cat2 .cards' + cardArray[i]).on('click', ()=> wagQuestions[i].click())
     $('#cat3 .cards' + cardArray[i]).on('click', ()=> mtQuestions[i].click())
     $('#cat4 .cards' + cardArray[i]).on('click', ()=> travelQuestions[i].click())
+    $('#cat5 .cards' + cardArray[i]).on('click', ()=> kidsQuestions[i].click())
+    $('#finalquestion').on('click', ()=> finalQuestion[i].click())
 }
 
 
