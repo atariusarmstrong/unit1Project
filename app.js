@@ -92,13 +92,39 @@ var categoryTwo = [{
     answer: 3
 }]
 
-
+//CATEGORY THREE QUESTIONS -- MUSICAL THEATRE
+var categoryThree = [{
+    question: 'A 2012 holiday gift to Broadway was a musical based on this Will Ferrell movie about a visitor from the North Pole',
+    options: ['White Christmas', 'Elf: The Musical', 'A Christmas Carol', "It's a Wonderful Life"],
+    answer: 1
+},
+{
+    question: "Called the most influential work in the American musical theatre it opens with Oh What A Beautiful Mornin'",
+    options: ['The Color Purple', 'Catch Me If You Can', 'Oklahoma', 'Bring It On: The Musical'],
+    answer: 2
+},
+{
+    question: "This phantom musical theatre composer holds the title Baron of Sydmonton",
+    options: ['Andrew Lloyd Webber', 'Stephen Sondheim', 'Richard Rodgers', 'Lin-Manuel Miranda'],
+    answer: 0
+},
+{
+    question: 'Cotton Blossom the opening song of this musical is also the name of the title vessel',
+    options: ['Titanic', 'Show Boat', 'Big River', 'Big Fish'],
+    answer: 1
+},
+{
+    question: 'Sally Bowles is a singer at the Kit Kat Club in this musical set in Berlin',
+    options: ['A Chorus Line', "Smokey Joe's Cafe", "Cabaret", "Xanadu"],
+    answer: 2
+}]
 
 let cardArray = [".one", ".two", ".three", ".four", ".five"]
 
-//FUNCTIONS TO DISPLAY ABOVE CATEGORIES
+//FUNCTION & ARRAYS TO DISPLAY ABOVE CATEGORIES
 let musicQuestions = []
 let wagQuestions = []
+let mtQuestions = []
 
 
 for (let i=0; i<5; i++){
@@ -106,13 +132,18 @@ for (let i=0; i<5; i++){
     let musicObject = new questionModal(categoryOne[i].question, categoryOne[i].options, categoryOne[i].answer, (i*100+(100)))
     musicQuestions.push(musicObject)
 
-    //--WILL&GRACE QUESTIONS FOR CATEGORY2
+    //--WILL&GRACE QUESTIONS FOR CATEGORY 2
     let wagObject = new questionModal(categoryTwo[i].question, categoryTwo[i].options, categoryTwo[i].answer, (i*100+(100)))
     wagQuestions.push(wagObject)
+
+    //--MUSICAL THEATRE QUESTIONS FOR CATEGORY 3
+    let mtObject = new questionModal(categoryThree[i].question, categoryThree[i].options, categoryThree[i].answer, (i*100+(100)))
+    mtQuestions.push(mtObject)
     
-    //console.log($('#cat1 .cards' + cardArray[i]).html())
+    
     $('#cat1 .cards' + cardArray[i]).on('click', ()=> musicQuestions[i].click())
     $('#cat2 .cards' + cardArray[i]).on('click', ()=> wagQuestions[i].click())
+    $('#cat3 .cards' + cardArray[i]).on('click', ()=> mtQuestions[i].click())
 }
 
 
