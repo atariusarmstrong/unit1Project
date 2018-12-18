@@ -3,6 +3,13 @@ background: rgb(37,37,37);
 background: linear-gradient(0deg, rgba(37,37,37,1) 20%, rgba(116,116,116,1) 85%);
 }
 
+h3 {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
 .cards {
     width: 187px;
     height: 99px;
@@ -39,7 +46,7 @@ background: linear-gradient(0deg, rgba(37,37,37,1) 20%, rgba(116,116,116,1) 85%)
     grid-template-columns: 188px 188px 188px 188px 188px;
     grid-template-rows: 48px 99px 99px 99px 99px 99px 48px;
     grid-column-gap: 51px;
-    grid-row-gap: 18px;
+    grid-row-gap: 20px;
     grid-auto-flow: row;
     justify-content: center;
 }
@@ -61,9 +68,10 @@ background: linear-gradient(0deg, rgba(37,37,37,1) 20%, rgba(116,116,116,1) 85%)
     grid-row-start: 6;
 }
 
-#finalquestion {
+#score {
     border: solid black 1px;
     grid-column-end: span 5;
+    background-color: white;
 }
 
 
@@ -84,7 +92,7 @@ background: linear-gradient(0deg, rgba(37,37,37,1) 20%, rgba(116,116,116,1) 85%)
 #cat5{
     grid-column-start: 5;
 }
-#finalquestion{
+#score{
     grid-row-start: 7;
     font-family: 'Pacifico', cursive;
     font-size: 28px;
